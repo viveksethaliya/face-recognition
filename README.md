@@ -68,7 +68,6 @@ dataset/
 │ │ ├── image2.jpg
 │ │ └── ...
 │ ├── ...
-│ 
 ├── validation dataset/
 │ ├── class1/
 │ │ ├── image1.jpg
