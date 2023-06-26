@@ -5,8 +5,8 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import matplotlib.pyplot as plt
 
 # Set the path to your datasetc
-train_data_dir = 'dataT'
-validation_data_dir = 'dataV'
+train_data_dir = 'dataset/traindata'
+validation_data_dir = 'dataset/validationdata'
 
 # Define hyperparameters
 batch_size = 16
@@ -39,16 +39,7 @@ validation_generator = validation_datagen.flow_from_directory(validation_data_di
 history = model.fit(train_generator, epochs=epochs, validation_data=validation_generator)
 
 # Save the trained model
-model.save('DV.h5')
-
-
-# # summarize history for accuracy
-# plt.plot(mod.history['accuracy'], label='acc' )
-# plt.plot(mod.history['val_accuracy'], label='val_acc' )
-# plt.plot(mod.history['loss'], label='loss')
-# plt.plot(mod.history['val_loss'], label='val_loss')
-# plt.legend(loc='upper left')
-# plt.show()
+model.save('model.h5')
 
 # Plot the loss and validation accuracy
 plt.figure(figsize=(12, 4))
